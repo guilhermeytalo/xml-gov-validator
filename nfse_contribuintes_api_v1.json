@@ -2,7 +2,7 @@
   "openapi": "3.0.1",
   "info": {
     "title": "APIs PARA OS CONTRIBUINTES DO ISSQN NO SISTEMA NACIONAL NFS-e",
-    "description": "<p><strong>Protocolo de comunicação:</strong> TLS 1.0, TLS 1.1 e TLS 1.2 com autenticação mútua</p>  <p><strong>Formato para troca de mensagens:</strong> JSON</p>  <p><strong>Formato dos documentos da NFS-e:</strong> XML 1.0  <a href =\"https://www.w3.org/TR/REC-xml\"> (https://www.w3.org/TR/REC-xml)</a> </p>   <p><strong>Codificação de caracteres:</strong> UTF-8</p> <p><strong>Certificado digital:</strong> Emitido por Autoridade Certificadora ICP-Brasil, tipo A1 ou A3, CNPJ ou CPF, com \"Autenticação do Cliente\"</p> <p><strong>Padrão de assinatura dos documentos XML:</strong> XMLDSIG <a href=\"https://www.w3.org/TR/xmldsig-core\">  (https://www.w3.org/TR/xmldsig-core/) </a>  </p>    <p><strong>Padrão de compactação dos documentos XML para troca de mensagens:</strong> GZip com representao base64binary</p><br/>",
+    "description": "<p><strong>Protocolo de comunicação:</strong> TLS 1.0, TLS 1.1 e TLS 1.2 com autenticação mútua</p>  <p><strong>Formato para troca de mensagens:</strong> JSON</p>  <p><strong>Formato dos documentos da NFS-e:</strong> XML 1.0  <a href =\"https://www.w3.org/TR/REC-xml\"> (https://www.w3.org/TR/REC-xml)</a> </p>   <p><strong>Codificação de caracteres:</strong> UTF-8</p> <p><strong>Certificado digital:</strong> Emitido por Autoridade Certificadora ICP-Brasil, tipo A1 ou A3, CNPJ ou CPF, com \"Autenticação do Cliente\"</p> <p><strong>Padrão de assinatura dos documentos XML:</strong> XMLDSIG <a href=\"https://www.w3.org/TR/xmldsig-core\">  (https://www.w3.org/TR/xmldsig-core/) </a>  </p>    <p><strong>Padrão de compactação dos documentos XML para troca de mensagens:</strong> GZip com representação base64binary</p><br/>",
     "version": "v1"
   },
   "servers": [
@@ -355,7 +355,7 @@
           }
         ],
         "requestBody": {
-          "description": "Estrutura contendo o pedido de registro de evento compactado\n            no padrão GZip com representa\ufffd\ufffdo base64binary",
+          "description": "Estrutura contendo o pedido de registro de evento compactado\n            no padrão GZip com representação base64binary",
           "content": {
             "application/json": {
               "schema": {
@@ -387,7 +387,7 @@
             }
           },
           "401": {
-            "description": "Usuário não tem permiss\ufffdo para acessar os eventos",
+            "description": "Usuário não tem permissão para acessar os eventos",
             "content": {
               "application/json": {
                 "schema": {
@@ -530,7 +530,7 @@
           {
             "name": "numSeqEvento",
             "in": "path",
-            "description": "N\ufffdmero sequencial do evento. Se informado, os demais par\ufffdmetros s\ufffdo obrigat\ufffdrios",
+            "description": "Número sequencial do evento. Se informado, os demais parâmetros são obrigatórios",
             "required": true,
             "schema": {
               "type": "integer",
@@ -550,7 +550,7 @@
             }
           },
           "401": {
-            "description": "Usu\ufffdrio n\ufffdo tem permiss\ufffdo para acessar os eventos",
+            "description": "Usuário não tem permissão para acessar os eventos",
             "content": {
               "application/json": {
                 "schema": {
@@ -570,7 +570,7 @@
             }
           },
           "422": {
-            "description": "A requisi\ufffdo violou alguma regra de neg\ufffdocio",
+            "description": "A requisição violou alguma regra de negócio",
             "content": {
               "application/json": {
                 "schema": {
@@ -588,10 +588,10 @@
         "tags": [
           "NFS-e - https://sefin.nfse.gov.br/sefinnacional"
         ],
-        "summary": "Recepciona a DPS e Gera a NFS-e de forma s\ufffdncrona.",
+        "summary": "Recepciona a DPS e Gera a NFS-e de forma síncrona.",
         "operationId": "NFSe_Post",
         "requestBody": {
-          "description": "Estrutura contendo um DPS compactado no padr\ufffdo gZip (base64Binary)",
+          "description": "Estrutura contendo um DPS compactado no padrão gZip (base64Binary)",
           "content": {
             "application/json": {
               "schema": {
@@ -613,7 +613,7 @@
             }
           },
           "400": {
-            "description": "N\ufffdo foi poss\ufffdvel criar a NFS-e",
+            "description": "Não foi possível criar a NFS-e",
             "content": {
               "application/json": {
                 "schema": {
@@ -623,7 +623,7 @@
             }
           },
           "403": {
-            "description": "Certificado digital da transmiss\ufffdo inv\ufffdlido ou fora dos padr\ufffdes da NFS-e",
+            "description": "Certificado digital da transmissão inválido ou fora dos padrões da NFS-e",
             "content": {
               "application/json": {
                 "schema": {
@@ -651,7 +651,7 @@
         "tags": [
           "NFS-e - https://sefin.nfse.gov.br/sefinnacional"
         ],
-        "summary": "Retorna a NFS-e a partir da consulta pela chave de acesso correspondente (50 posi\ufffdo\ufffdes).",
+        "summary": "Retorna a NFS-e a partir da consulta pela chave de acesso correspondente (50 posições).",
         "operationId": "NFSe_Get",
         "parameters": [
           {
@@ -675,7 +675,7 @@
             }
           },
           "400": {
-            "description": "A chave de acesso consultada deve conter 50 n\ufffdmeros.",
+            "description": "A chave de acesso consultada deve conter 50 números.",
             "content": {
               "application/json": {
                 "schema": {
@@ -685,7 +685,7 @@
             }
           },
           "401": {
-            "description": "N\ufffdo foi poss\ufffdvel obter o certificado de cliente.",
+            "description": "Não foi possível obter o certificado de cliente.",
             "content": {
               "application/json": {
                 "schema": {
@@ -695,7 +695,7 @@
             }
           },
           "404": {
-            "description": "Chave de acesso n\ufffdo encontrada.",
+            "description": "Chave de acesso não encontrada.",
             "content": {
               "application/json": {
                 "schema": {
@@ -710,14 +710,14 @@
     "/parametros_municipais/{codigoMunicipio}/{codigoServico}/{competencia}/aliquota": {
       "get": {
         "tags": [
-          "Par\ufffdmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
+          "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
         ],
-        "summary": "Retorna a al\ufffdquota do ISSQN parametrizada de um munic\ufffdo a partir desta consulta.",
+        "summary": "Retorna a alíquota do ISSQN parametrizada de um município a partir desta consulta.",
         "operationId": "Aliquotas_Get",
         "parameters": [
           {
             "name": "codigoMunicipio",
-            "description": "O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "O código do município deve ser composto por sete dígitos.",
             "in": "path",
             "required": true,
             "type": "integer",
@@ -725,7 +725,7 @@
           },
           {
             "name": "codigoServico",
-            "description": "O c\ufffddigo do servi\ufffdo deve ser informado no formato 00.00.00.000.",
+            "description": "O código do serviço deve ser informado no formato 00.00.00.000.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -741,7 +741,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Al\ufffdquota recuperada com sucesso.",
+            "description": "Alíquota recuperada com sucesso.",
             "content": {
               "application/json": {
                 "schema": {
@@ -751,7 +751,7 @@
             }
           },
           "400": {
-            "description": "Chamada mal formada. A compet\ufffdncia informada n\ufffdo \ufffde uma data v\ufffdlida.",
+            "description": "Chamada mal formada. A competência informada não é uma data válida.",
             "content": {
               "application/json": {
                 "schema": {
@@ -761,7 +761,7 @@
             }
           },
           "404": {
-            "description": "Conv\ufffdenio para o c\ufffddigo do munic\ufffdo n\ufffdo se encontra na Situa\ufffdo='Ativa'.",
+            "description": "Convênio para o código do município não se encontra na Situação='Ativa'.",
             "content": {
               "application/json": {
                 "schema": {
@@ -777,15 +777,15 @@
     },
     "/parametros_municipais/{codigoMunicipio}/{codigoServico}/historicoaliquotas": {
       "get": {
-        "tags": [ "Par\ufffdmetros Municipais - https://sefin.nfse.gov.br/sefinnacional" ],
-        "summary": "Retorna hist\ufffdoorico de al\ufffdoquotas do ISSQN parametrizadas de um munic\ufffdo a partir de um c\ufffddigo de munic\ufffdo e c\ufffddigo de servi\ufffdo.",
+        "tags": [ "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional" ],
+        "summary": "Retorna histórico de alíquotas do ISSQN parametrizadas de um município a partir de um código de município e código de serviço.",
         "operationId": "Aliquotas_Get",
         "consumes": [],
         "produces": [ "application/json" ],
         "parameters": [
           {
             "name": "codigoMunicipio",
-            "description": "O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "O código do município deve ser composto por sete dígitos.",
             "in": "path",
             "required": true,
             "type": "integer",
@@ -793,7 +793,7 @@
           },
           {
             "name": "codigoServico",
-            "description": "O c\ufffddigo do servi\ufffdo deve ser informado no formato 00.00.00.000.",
+            "description": "O código do serviço deve ser informado no formato 00.00.00.000.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -801,15 +801,15 @@
         ],
         "responses": {
           "200": {
-            "description": "Hist\ufffdoorio de al\ufffdoquotas recuperados com sucesso.",
+            "description": "Histório de alíquotas recuperados com sucesso.",
             "schema": { "$ref": "#/components/schemas/ResultadoConsultaAliquotas" }
           },
           "400": {
-            "description": "Chamada mal formada. O c\ufffddigo do servi\ufffdo deve ser informado no formato 00.00.00.000.",
+            "description": "Chamada mal formada. O código do serviço deve ser informado no formato 00.00.00.000.",
             "schema": { "$ref": "#/components/schemas/ResultadoConsultaAliquotas" }
           },
           "404": {
-            "description": "Conv\ufffdenio para o c\ufffddigo do munic\ufffdo n\ufffdo se encontra na Situa\ufffdo='Ativa'.",
+            "description": "Convênio para o código do município não se encontra na Situação='Ativa'.",
             "schema": { "$ref": "#/components/schemas/ResultadoConsultaAliquotas" }
           }
         }
@@ -818,14 +818,14 @@
     "/parametros_municipais/{codigoMunicipio}/convenio": {
       "get": {
         "tags": [
-          "Par\ufffdmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
+          "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
         ],
-        "summary": "Retorna os par\ufffdmetros do conv\ufffdenio de um munic\ufffdo a partir desta consulta.",
+        "summary": "Retorna os parâmetros do convênio de um município a partir desta consulta.",
         "operationId": "Convenio_Get",
         "parameters": [
           {
             "name": "codigoMunicipio",
-            "description": "O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "O código do município deve ser composto por sete dígitos.",
             "in": "path",
             "required": true,
             "schema": {
@@ -836,7 +836,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Par\ufffdmetros do conv\ufffdenio recuperados com sucesso.",
+            "description": "Parâmetros do convênio recuperados com sucesso.",
             "content": {
               "application/json": {
                 "schema": {
@@ -846,7 +846,7 @@
             }
           },
           "400": {
-            "description": "Chamada mal formada. O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "Chamada mal formada. O código do município deve ser composto por sete dígitos.",
             "content": {
               "application/json": {
                 "schema": {
@@ -856,7 +856,7 @@
             }
           },
           "404": {
-            "description": "Conv\ufffdenio para o c\ufffddigo do munic\ufffdo n\ufffdo se encontra na Situa\ufffdo='Ativa'.",
+            "description": "Convênio para o código do município não se encontra na Situação='Ativa'.",
             "content": {
               "application/json": {
                 "schema": {
@@ -871,14 +871,14 @@
     "/parametros_municipais/{codigoMunicipio}/{codigoServico}/{competencia}/regimes_especiais": {
       "get": {
         "tags": [
-          "Par\ufffdmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
+          "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
         ],
-        "summary": "Retorna os par\ufffdmetros de regimes especiais de tributa\ufffdo de um munic\ufffdo a partir desta consulta.",
+        "summary": "Retorna os parâmetros de regimes especiais de tributação de um município a partir desta consulta.",
         "operationId": "RegimesEspeciais_Get",
         "parameters": [
           {
             "name": "codigoMunicipio",
-            "description": "O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "O código do município deve ser composto por sete dígitos.",
             "in": "path",
             "required": true,
             "type": "integer",
@@ -886,7 +886,7 @@
           },
           {
             "name": "codigoServico",
-            "description": "O c\ufffddigo do servi\ufffdo deve ser informado no formato 00.00.00.000.",
+            "description": "O código do serviço deve ser informado no formato 00.00.00.000.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -902,7 +902,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Par\ufffdmetros de regimes especiais recuperados com sucesso.",
+            "description": "Parâmetros de regimes especiais recuperados com sucesso.",
             "content": {
               "application/json": {
                 "schema": {
@@ -912,7 +912,7 @@
             }
           },
           "400": {
-            "description": "Chamada mal formada. A compet\ufffdncia informada n\ufffdo \ufffde uma data v\ufffdlida.",
+            "description": "Chamada mal formada. A competência informada não é uma data válida.",
             "content": {
               "application/json": {
                 "schema": {
@@ -922,7 +922,7 @@
             }
           },
           "404": {
-            "description": "Conv\ufffdenio para o c\ufffddigo do munic\ufffdo n\ufffdo se encontra na Situa\ufffdo='Ativa'.",
+            "description": "Convênio para o código do município não se encontra na Situação='Ativa'.",
             "content": {
               "application/json": {
                 "schema": {
@@ -937,14 +937,14 @@
     "/parametros_municipais/{codigoMunicipio}/{competencia}/retencoes": {
       "get": {
         "tags": [
-          "Par\ufffdmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
+          "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional"
         ],
-        "summary": "Retorna os par\ufffdmetros para reten\ufffdo\ufffdes do ISSQN de um munic\ufffdo a partir desta consulta.",
+        "summary": "Retorna os parâmetros para retenções do ISSQN de um município a partir desta consulta.",
         "operationId": "Retencoes_Get",
         "parameters": [
           {
             "name": "codigoMunicipio",
-            "description": "O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "O código do município deve ser composto por sete dígitos.",
             "in": "path",
             "required": true,
             "type": "integer",
@@ -961,7 +961,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Par\ufffdmetros de reten\ufffdo\ufffdes recuperados com sucesso.",
+            "description": "Parâmetros de retenções recuperados com sucesso.",
             "content": {
               "application/json": {
                 "schema": {
@@ -971,7 +971,7 @@
             }
           },
           "400": {
-            "description": "Chamada mal formada. O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "Chamada mal formada. O código do município deve ser composto por sete dígitos.",
             "content": {
               "application/json": {
                 "schema": {
@@ -981,7 +981,7 @@
             }
           },
           "404": {
-            "description": "Conv\ufffdenio para o c\ufffddigo do munic\ufffdo n\ufffdo se encontra na Situa\ufffdo='Ativa'.",
+            "description": "Convênio para o código do município não se encontra na Situação='Ativa'.",
             "content": {
               "application/json": {
                 "schema": {
@@ -995,13 +995,13 @@
     },
     "/parametros_municipais/{codigoMunicipio}/{numeroBeneficio}/{competencia}/beneficio": {
       "get": {
-        "tags": [ "Par\ufffdmetros Municipais - https://sefin.nfse.gov.br/sefinnacional" ],
-        "summary": "Retorna os par\ufffdmetros de um n\ufffdmero de benef\ufffdocio municipal a partir desta consulta.",
+        "tags": [ "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional" ],
+        "summary": "Retorna os parâmetros de um número de benefício municipal a partir desta consulta.",
         "operationId": "Beneficio_Get",
         "parameters": [
           {
             "name": "codigoMunicipio",
-            "description": "O c\ufffddigo do munic\ufffdo deve ser composto por sete d\ufffdgitos.",
+            "description": "O código do município deve ser composto por sete dígitos.",
             "in": "path",
             "required": true,
             "type": "integer",
@@ -1009,7 +1009,7 @@
           },
           {
             "name": "numeroBeneficio",
-            "description": "O n\ufffdmero do munic\ufffdo deve ser composto por onze d\ufffdgitos.",
+            "description": "O número do município deve ser composto por onze dígitos.",
             "in": "path",
             "required": true,
             "type": "number",
@@ -1026,7 +1026,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Benef\ufffdocio recuperado com sucesso.",
+            "description": "Benefício recuperado com sucesso.",
             "content": {
               "application/json": {
                 "schema": {
@@ -1036,7 +1036,7 @@
             }
           },
           "400": {
-            "description": "Chamada mal formada. A compet\ufffdncia informada n\ufffdo \ufffde uma data v\ufffdlida.",
+            "description": "Chamada mal formada. A competência informada não é uma data válida.",
             "content": {
               "application/json": {
                 "schema": {
@@ -1046,7 +1046,7 @@
             }
           },
           "404": {
-            "description": "Par\ufffdmetros do benef\ufffdocio de n\ufffdmero <NumeroBeneficio> n\ufffdo encontrado para a compet\ufffdncia.",
+            "description": "Parâmetros do benefício de número <NumeroBeneficio> não encontrado para a competência.",
             "content": {
               "application/json": {
                 "schema": {
@@ -1075,7 +1075,7 @@
         "properties": {
           "tipoAmbiente": {
             "type": "integer",
-            "description": "Tipo de ambiente (1-Produ\ufffdo | 2-Homologa\ufffdo)",
+            "description": "Tipo de ambiente (1-Produção | 2-Homologação)",
             "format": "int32",
             "enum": [
               1,
@@ -1084,11 +1084,11 @@
           },
           "versaoAplicativo": {
             "type": "string",
-            "description": "Vers\ufffdo do aplicativo que processou a requisi\ufffdo"
+            "description": "Versão do aplicativo que processou a requisição"
           },
           "dataHoraProcessamento": {
             "type": "string",
-            "description": "Data e hora de processamento da requisi\ufffdo",
+            "description": "Data e hora de processamento da requisição",
             "format": "date-time",
             "example": "2020-07-30T17:28:42.576Z"
           },
@@ -1114,7 +1114,7 @@
         "properties": {
           "tipoAmbiente": {
             "type": "integer",
-            "description": "Tipo de ambiente (1-Produ\ufffdo | 2-Homologa\ufffdo)",
+            "description": "Tipo de ambiente (1-Produção | 2-Homologação)",
             "format": "int32",
             "enum": [
               1,
@@ -1123,11 +1123,11 @@
           },
           "versaoAplicativo": {
             "type": "string",
-            "description": "Vers\ufffdo do aplicativo que processou a requisi\ufffdo"
+            "description": "Versão do aplicativo que processou a requisição"
           },
           "dataHoraProcessamento": {
             "type": "string",
-            "description": "Data e hora de processamento da requisi\ufffdo",
+            "description": "Data e hora de processamento da requisição",
             "format": "date-time",
             "example": "2020-07-30T17:28:42.578Z"
           },
@@ -1135,7 +1135,7 @@
             "$ref": "#/components/schemas/MensagemProcessamento"
           }
         },
-        "description": "Estrutura de resposta padr\ufffdo para erros"
+        "description": "Estrutura de resposta padrão para erros"
       },
       "MensagemProcessamento": {
         "type": "object",
@@ -1168,10 +1168,10 @@
         "properties": {
           "pedidoRegistroEventoXmlGZipB64": {
             "type": "string",
-            "description": "Pedido de registro de evento no formato Xml compactado no padr\ufffdo gZip (base64Binary)"
+            "description": "Pedido de registro de evento no formato Xml compactado no padrão gZip (base64Binary)"
           }
         },
-        "description": "Estrutura para requisi\ufffdo de pedido de registro de evento"
+        "description": "Estrutura para requisição de pedido de registro de evento"
       },
       "EventosPostResponseSucesso": {
         "required": [
@@ -1184,7 +1184,7 @@
         "properties": {
           "tipoAmbiente": {
             "type": "integer",
-            "description": "Tipo de ambiente (1-Produ\ufffdo | 2-Homologa\ufffdo)",
+            "description": "Tipo de ambiente (1-Produção | 2-Homologação)",
             "format": "int32",
             "enum": [
               1,
@@ -1193,20 +1193,20 @@
           },
           "versaoAplicativo": {
             "type": "string",
-            "description": "Vers\ufffdo do aplicativo que processou a requisi\ufffdo"
+            "description": "Versão do aplicativo que processou a requisição"
           },
           "dataHoraProcessamento": {
             "type": "string",
-            "description": "Data e hora de processamento da requisi\ufffdo",
+            "description": "Data e hora de processamento da requisição",
             "format": "date-time",
             "example": "2020-07-30T17:28:42.581Z"
           },
           "eventoXmlGZipB64": {
             "type": "string",
-            "description": "Evento no formato Xml compactado no padr\ufffdo gZip (base64Binary)"
+            "description": "Evento no formato Xml compactado no padrão gZip (base64Binary)"
           }
         },
-        "description": "Estrutura de resposta de sucesso do processamento do pedido de registro de evento\r\ncontendo o evento no formato Xml compactado no padr\ufffdo gZip(base64Binary)"
+        "description": "Estrutura de resposta de sucesso do processamento do pedido de registro de evento\r\ncontendo o evento no formato Xml compactado no padrão gZip(base64Binary)"
       },
       "NFSePostRequest": {
         "required": [
@@ -1216,10 +1216,10 @@
         "properties": {
           "dpsXmlGZipB64": {
             "type": "string",
-            "description": "DPS compactado no padr\ufffdo gZip (base64Binary)"
+            "description": "DPS compactado no padrão gZip (base64Binary)"
           }
         },
-        "description": "Estrutura para enviar o DPS para processamento ass\ufffdncrono"
+        "description": "Estrutura para enviar o DPS para processamento assíncrono"
       },
       "NFSePostResponseSucesso": {
         "required": [
@@ -1234,7 +1234,7 @@
         "properties": {
           "tipoAmbiente": {
             "type": "integer",
-            "description": "Tipo de ambiente (1-Produ\ufffdo | 2-Homologa\ufffdo)",
+            "description": "Tipo de ambiente (1-Produção | 2-Homologação)",
             "format": "int32",
             "enum": [
               1,
@@ -1243,11 +1243,11 @@
           },
           "versaoAplicativo": {
             "type": "string",
-            "description": "Vers\ufffdo do aplicativo que processou a requisi\ufffdo"
+            "description": "Versão do aplicativo que processou a requisição"
           },
           "dataHoraProcessamento": {
             "type": "string",
-            "description": "Data e hora de processamento da requisi\ufffdo",
+            "description": "Data e hora de processamento da requisição",
             "format": "date-time",
             "example": "2020-07-30T17:28:42.584Z"
           },
@@ -1263,7 +1263,7 @@
           },
           "nfseXmlGZipB64": {
             "type": "string",
-            "description": "NFS-e em formato Xml compactado no padr\ufffdo gZip (base64Binary)",
+            "description": "NFS-e em formato Xml compactado no padrão gZip (base64Binary)",
             "readOnly": true
           },
           "alertas": {
@@ -1275,7 +1275,7 @@
             }
           }
         },
-        "description": "Estrutura para resposta de sucesso para a cria\ufffdo da NFS-e s\ufffdncrona"
+        "description": "Estrutura para resposta de sucesso para a criação da NFS-e síncrona"
       },
       "NFSePostResponseErro": {
         "required": [
@@ -1288,7 +1288,7 @@
         "properties": {
           "tipoAmbiente": {
             "type": "integer",
-            "description": "Tipo de ambiente (1-Produ\ufffdo | 2-Homologa\ufffdo)",
+            "description": "Tipo de ambiente (1-Produção | 2-Homologação)",
             "format": "int32",
             "enum": [
               1,
@@ -1297,11 +1297,11 @@
           },
           "versaoAplicativo": {
             "type": "string",
-            "description": "Vers\ufffdo do aplicativo que processou a requisi\ufffdo"
+            "description": "Versão do aplicativo que processou a requisição"
           },
           "dataHoraProcessamento": {
             "type": "string",
-            "description": "Data e hora de processamento da requisi\ufffdo",
+            "description": "Data e hora de processamento da requisição",
             "format": "date-time",
             "example": "2020-07-30T17:28:42.585Z"
           },
@@ -1333,7 +1333,7 @@
         "properties": {
           "tipoAmbiente": {
             "type": "integer",
-            "description": "Tipo de ambiente (1-Produ\ufffdo | 2-Homologa\ufffdo)",
+            "description": "Tipo de ambiente (1-Produção | 2-Homologação)",
             "format": "int32",
             "enum": [
               1,
@@ -1342,11 +1342,11 @@
           },
           "versaoAplicativo": {
             "type": "string",
-            "description": "Vers\ufffdo do aplicativo que processou a requisi\ufffdo"
+            "description": "Versão do aplicativo que processou a requisição"
           },
           "dataHoraProcessamento": {
             "type": "string",
-            "description": "Data e hora de processamento da requisi\ufffdo",
+            "description": "Data e hora de processamento da requisição",
             "format": "date-time",
             "example": "2020-07-30T17:28:42.586Z"
           },
@@ -1356,7 +1356,7 @@
           },
           "nfseXmlGZipB64": {
             "type": "string",
-            "description": "NFS-e em formato Xml compactado no padr\ufffdo gZip (base64Binary)"
+            "description": "NFS-e em formato Xml compactado no padrão gZip (base64Binary)"
           }
         },
         "description": "Estrutura de resposta para consulta de NFS-e"

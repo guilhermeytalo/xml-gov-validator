@@ -1,0 +1,938 @@
+{
+	"info": {
+		"name": "APIs PARA OS CONTRIBUINTES DO ISSQN NO SISTEMA NACIONAL NFS-e",
+		"description": {
+		    "content": "<p><strong>Protocolo de comunicação:</strong> TLS 1.0, TLS 1.1 e TLS 1.2 com autenticação mútua</p>  <p><strong>Formato para troca de mensagens:</strong> JSON</p>  <p><strong>Formato dos documentos da NFS-e:</strong> XML 1.0  <a href =\"https://www.w3.org/TR/REC-xml\"> (https://www.w3.org/TR/REC-xml)</a> </p>   <p><strong>Codificação de caracteres:</strong> UTF-8</p> <p><strong>Certificado digital:</strong> Emitido por Autoridade Certificadora ICP-Brasil, tipo A1 ou A3, CNPJ ou CPF, com \"Autenticação do Cliente\"</p> <p><strong>Padrão de assinatura dos documentos XML:</strong> XMLDSIG <a href=\"https://www.w3.org/TR/xmldsig-core\">  (https://www.w3.org/TR/xmldsig-core/) </a>  </p>    <p><strong>Padrão de compactação dos documentos XML para troca de mensagens:</strong> GZip com representação base64binary</p><br/>",
+		    "type": "text/markdown"
+		},
+		"version": "v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+	        {
+	            "name": "DFe - https://adn.nfse.gov.br/contribuinte",
+	            "item": [
+	                        {
+    "name": "/DFe/:NSU",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Distribui os DF-e para contribuintes relacionados à NFS-e. ",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "text/plain",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/DFe/:NSU",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "DFe",
+        ":NSU"
+    ],
+    "variable": [
+        {
+        "key": "nSU",
+        "value": "",
+        "description": ""
+        }
+    ],
+    "query": [
+        {
+        "key": "lote",
+        "value": "true",
+        "description": "",
+        "disabled": true
+        }
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/NFSe/:ChaveAcesso/Eventos",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Distribui os DF-e vinculados à chave de acesso informada",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "text/plain",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/NFSe/:ChaveAcesso/Eventos",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "NFSe",
+        ":ChaveAcesso",
+        "Eventos"
+    ],
+    "variable": [
+        {
+        "key": "chaveAcesso",
+        "value": "",
+        "description": ""
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Eventos - https://sefin.nfse.gov.br/sefinnacional",
+	            "item": [
+	                        {
+    "name": "/nfse/:ChaveAcesso/eventos",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna os Documentos Fiscais de Serviço do tipo Evento vinculados à chave de acesso informada",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "text/plain",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/nfse/:ChaveAcesso/eventos",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "nfse",
+        ":ChaveAcesso",
+        "eventos"
+    ],
+    "variable": [
+        {
+        "key": "chaveAcesso",
+        "value": "",
+        "description": ""
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/nfse/:chaveAcesso/eventos",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Recepciona o Pedido de Registro de Evento e gera Eventos de NFS-e, crédito, débito e apuração.",
+                                "request": {
+    "method": "POST",
+    "header": [
+        {
+        "key": "Content-Type",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        },
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "{\n \"pedidoRegistroEventoXmlGZipB64\": \"<string>\"\n}",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/nfse/:chaveAcesso/eventos",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "nfse",
+        ":chaveAcesso",
+        "eventos"
+    ],
+    "variable": [
+        {
+        "key": "chaveAcesso",
+        "value": "",
+        "description": ""
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/nfse/:chaveAcesso/eventos/:tipoEvento/:numSeqEvento",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna NFS-e e seus eventos relacionados a partir da consulta pela chave de acesso da NFS-e.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/nfse/:chaveAcesso/eventos/:tipoEvento/:numSeqEvento",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "nfse",
+        ":chaveAcesso",
+        "eventos",
+        ":tipoEvento",
+        ":numSeqEvento"
+    ],
+    "variable": [
+        {
+        "key": "chaveAcesso",
+        "value": "",
+        "description": "Chave de acesso"
+        },
+        {
+        "key": "tipoEvento",
+        "value": "",
+        "description": "Tipo de evento"
+        },
+        {
+        "key": "numSeqEvento",
+        "value": "",
+        "description": "Número sequencial do evento. Se informado, os demais parâmetros são obrigatórios"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "NFS-e - https://sefin.nfse.gov.br/sefinnacional",
+	            "item": [
+	                        {
+    "name": "/nfse",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Recepciona a DPS e Gera a NFS-e de forma síncrona.",
+                                "request": {
+    "method": "POST",
+    "header": [
+        {
+        "key": "Content-Type",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        },
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "{\n \"dpsXmlGZipB64\": \"<string>\"\n}",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/nfse",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "nfse"
+    ],
+    "variable": [
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/nfse/:chaveAcesso",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna a NFS-e a partir da consulta pela chave de acesso correspondente (50 posições).",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/nfse/:chaveAcesso",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "nfse",
+        ":chaveAcesso"
+    ],
+    "variable": [
+        {
+        "key": "chaveAcesso",
+        "value": "",
+        "description": ""
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "DPS - https://sefin.nfse.gov.br/sefinnacional",
+	            "item": [
+	                        {
+    "name": "/dps/:id",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna a chave de acesso da NFS-e a partir do identificador do DPS.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/dps/:id",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "dps",
+        ":id"
+    ],
+    "variable": [
+        {
+        "key": "id",
+        "value": "",
+        "description": "Identificador do DPS"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/dps/:id",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Verifica se uma NFS-e foi emitida a partir do Id do DPS",
+                                "request": {
+    "method": "HEAD",
+    "header": [
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/dps/:id",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "dps",
+        ":id"
+    ],
+    "variable": [
+        {
+        "key": "id",
+        "value": "",
+        "description": "Identificador do DPS"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "Parâmetros Municipais - https://sefin.nfse.gov.br/sefinnacional",
+	            "item": [
+	                        {
+    "name": "/parametros_municipais/:codigoMunicipio/:codigoServico/:competencia/aliquota",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna a alíquota do ISSQN parametrizada de um município a partir desta consulta.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/parametros_municipais/:codigoMunicipio/:codigoServico/:competencia/aliquota",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "parametros_municipais",
+        ":codigoMunicipio",
+        ":codigoServico",
+        ":competencia",
+        "aliquota"
+    ],
+    "variable": [
+        {
+        "key": "UNKNOWN_PARAMETER_NAME",
+        "value": "",
+        "description": "O código do município deve ser composto por sete dígitos."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME2",
+        "value": "",
+        "description": "O código do serviço deve ser informado no formato 00.00.00.000."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME3",
+        "value": "",
+        "description": "No formato MM/DD/YYYY"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/parametros_municipais/:codigoMunicipio/:codigoServico/:competencia/regimes_especiais",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna os parâmetros de regimes especiais de tributação de um município a partir desta consulta.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/parametros_municipais/:codigoMunicipio/:codigoServico/:competencia/regimes_especiais",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "parametros_municipais",
+        ":codigoMunicipio",
+        ":codigoServico",
+        ":competencia",
+        "regimes_especiais"
+    ],
+    "variable": [
+        {
+        "key": "UNKNOWN_PARAMETER_NAME",
+        "value": "",
+        "description": "O código do município deve ser composto por sete dígitos."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME2",
+        "value": "",
+        "description": "O código do serviço deve ser informado no formato 00.00.00.000."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME3",
+        "value": "",
+        "description": "No formato MM/DD/YYYY"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/parametros_municipais/:codigoMunicipio/:codigoServico/historicoaliquotas",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna histórico de alíquotas do ISSQN parametrizadas de um município a partir de um código de município e código de serviço.",
+                                "request": {
+    "method": "GET",
+    "header": [
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/parametros_municipais/:codigoMunicipio/:codigoServico/historicoaliquotas",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "parametros_municipais",
+        ":codigoMunicipio",
+        ":codigoServico",
+        "historicoaliquotas"
+    ],
+    "variable": [
+        {
+        "key": "UNKNOWN_PARAMETER_NAME",
+        "value": "",
+        "description": "O código do município deve ser composto por sete dígitos."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME2",
+        "value": "",
+        "description": "O código do serviço deve ser informado no formato 00.00.00.000."
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/parametros_municipais/:codigoMunicipio/:competencia/retencoes",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna os parâmetros para retenções do ISSQN de um município a partir desta consulta.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/parametros_municipais/:codigoMunicipio/:competencia/retencoes",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "parametros_municipais",
+        ":codigoMunicipio",
+        ":competencia",
+        "retencoes"
+    ],
+    "variable": [
+        {
+        "key": "UNKNOWN_PARAMETER_NAME",
+        "value": "",
+        "description": "O código do município deve ser composto por sete dígitos."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME2",
+        "value": "",
+        "description": "No formato MM/DD/YYYY"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/parametros_municipais/:codigoMunicipio/:numeroBeneficio/:competencia/beneficio",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna os parâmetros de um número de benefício municipal a partir desta consulta.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/parametros_municipais/:codigoMunicipio/:numeroBeneficio/:competencia/beneficio",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "parametros_municipais",
+        ":codigoMunicipio",
+        ":numeroBeneficio",
+        ":competencia",
+        "beneficio"
+    ],
+    "variable": [
+        {
+        "key": "UNKNOWN_PARAMETER_NAME",
+        "value": "",
+        "description": "O código do município deve ser composto por sete dígitos."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME2",
+        "value": "",
+        "description": "O número do município deve ser composto por onze dígitos."
+        },
+        {
+        "key": "UNKNOWN_PARAMETER_NAME3",
+        "value": "",
+        "description": "No formato MM/DD/YYYY"
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        },
+	                        {
+    "name": "/parametros_municipais/:codigoMunicipio/convenio",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna os parâmetros do convênio de um município a partir desta consulta.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/parametros_municipais/:codigoMunicipio/convenio",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "parametros_municipais",
+        ":codigoMunicipio",
+        "convenio"
+    ],
+    "variable": [
+        {
+        "key": "codigoMunicipio",
+        "value": "",
+        "description": "O código do município deve ser composto por sete dígitos."
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        },
+	        {
+	            "name": "DANFSe - https://sefin.nfse.gov.br/sefinnacional",
+	            "item": [
+	                        {
+    "name": "/danfse/:chaveAcesso",
+                "description": "",
+                 "item": [
+                            {
+                                "name": "Retorna o DANFSe de uma NFS-e a partir de sua chave de acesso.",
+                                "request": {
+    "method": "GET",
+    "header": [
+        {
+        "key": "Accept",
+        "value": "application/json",
+        "description": "",
+        "disabled": false
+        }
+    ],
+    "body": {
+    "mode": "raw",
+    "raw": "",
+    "options": {
+    "raw": {
+    "language": "json"
+    }
+    }
+    },
+    "url": {
+    "raw": "{{baseUrl}}/danfse/:chaveAcesso",
+    "host": [
+    "{{baseUrl}}"
+    ],
+    "path": [
+        "danfse",
+        ":chaveAcesso"
+    ],
+    "variable": [
+        {
+        "key": "chaveAcesso",
+        "value": "",
+        "description": ""
+        }
+    ],
+    "query": [
+    ]
+    },
+    "description": ""
+}
+                                ,"response": [
+                            ]
+                            }
+                            ]
+                        }
+	                    ]
+	        }
+    ],
+    
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://sefin.nfse.gov.br/sefinnacional",
+			"type": "string"
+        }
+	]
+}
+
