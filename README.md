@@ -20,6 +20,6 @@ O script irá carregar o XML e tentar validá-lo contra o `schemas/DPS_v1.00.xsd
 
 ## Origem dos Schemas XSD
 
-Os schemas XSD utilizados neste projeto foram obtidos do portal oficial da Nota Fiscal de Serviço Eletrônica (NFSe) Nacional, disponível em:
+Os schemas XSD utilizados neste projeto foram obtidos do portal oficial da [Nota Fiscal de Serviço Eletrônica (NFSe) Nacional](https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/leiaute-e-esquemas-antigos/xsd_pl_nfse_1-00-producao.zip/view).
 
-[https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/leiaute-e-esquemas-antigos/xsd_pl_nfse_1-00-producao.zip/view](https://www.gov.br/nfse/pt-br/biblioteca/documentacao-tecnica/leiaute-e-esquemas-antigos/xsd_pl_nfse_1-00-producao.zip/view)
+
