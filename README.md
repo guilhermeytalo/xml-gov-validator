@@ -32,8 +32,8 @@ Para facilitar a implementação de clientes para a API REST da NFSe, os seguint
 
 ### Cliente PHP (SDK)
 
-- `client_php/`: Um diretório contendo um cliente PHP completo para a API. Ele fornece classes e métodos para todas as operações da API, facilitando a integração.
-- **Como usar:** Consulte o arquivo `client_php/README.md` para instruções detalhadas sobre como instalar e utilizar o cliente com o Composer.
+- `client_php/`: Este diretório contém um SDK PHP gerado automaticamente para a API de Contribuintes da NFSe Nacional. Ele oferece classes e métodos para interagir com todos os endpoints da API, simplificando a integração em projetos PHP.
+- **Como usar:** Para instruções detalhadas sobre a instalação (via Composer com repositório `path`) e exemplos de uso, consulte o `README.md` localizado em `client_php/README.md`. Lá você encontrará como configurar o cliente, realizar chamadas à API e o que esperar das respostas.
 
 ### Coleção Postman
 
