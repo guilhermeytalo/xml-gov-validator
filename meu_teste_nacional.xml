@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DPS xmlns="http://www.sped.fazenda.gov.br/nfse" versao="1.00">
+  <infDPS Id="DPS000000000000000000000000000000000000000004">
+    <tpAmb>2</tpAmb>
+    <dhEmi>2025-10-27T10:00:00-03:00</dhEmi>
+    <verAplic>1.0.0</verAplic>
+    <serie>1</serie>
+    <nDPS>4</nDPS>
+    <dCompet>2025-10-27</dCompet>
+    <tpEmit>1</tpEmit>
+    <cLocEmi>4208203</cLocEmi>
+    <prest>
+      <CNPJ>22222222000122</CNPJ>
+      <regTrib>
+        <opSimpNac>2</opSimpNac>
+        <regEspTrib>0</regEspTrib>
+      </regTrib>
+    </prest>
+    <toma>
+      <CPF>00000000191</CPF>
+      <xNome>Tomador Teste</xNome>
+    </toma>
+    <serv>
+      <locPrest>
+        <cLocPrestacao>4208203</cLocPrestacao>
+      </locPrest>
+      <cServ>
+        <cTribNac>160100</cTribNac>
+        <xDescServ>Serviço no exterior SEM ISS</xDescServ>
+        <cNBS>010502000</cNBS>
+      </cServ>
+    </serv>
+    <valores>
+      <vServPrest>
+        <vServ>400.00</vServ>
+      </vServPrest>
+      <vDescCondIncond>
+        <vDescIncond>0.00</vDescIncond>
+        <vDescCond>0.00</vDescCond>
+      </vDescCondIncond>
+      <trib>
+        <tribMun>
+          <tribISSQN>2</tribISSQN>
+          <tpRetISSQN>1</tpRetISSQN>
+        </tribMun>
+        <tribNac>
+          <piscofins>
+            <CST>01</CST>
+            <vBCPisCofins>400.00</vBCPisCofins>
+            <tpRetPisCofins>2</tpRetPisCofins>
+          </piscofins>
+        </tribNac>
+        <totTrib>
+          <indTotTrib>0</indTotTrib>
+        </totTrib>
+      </trib>
+    </valores>
+  </infDPS>
+</DPS>
